@@ -20,8 +20,8 @@ public class ProyectoCostos {
      */
     public static void main(String[] args)   {
         // TODO code application logic here
-        Giro bs = new Giro();
-        bs.encontrarValor(50000);
+        Pasaje bs = new Pasaje();
+        bs.encontrarValor("Bucaramanga - Gamarra	");
         
     }
     

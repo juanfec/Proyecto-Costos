@@ -11,14 +11,16 @@ package proyecto.costos;
  */
 public class Valor {
     double precioDeVenta;
-    int manoDeObra;
-    int diferencia;
+    double manoDeObra;
+    double diferencia;
+    double costoConductor;
+    double costoEmpresa;
     
     public Valor(){
         
     }
 
-    public Valor(double precioDeVenta , int manoDeObra , int diferencia ) {
+    public Valor(double precioDeVenta , double manoDeObra , double diferencia ) {
         this.diferencia = diferencia;
         this.manoDeObra = manoDeObra;
         this.precioDeVenta = precioDeVenta;
@@ -32,20 +34,36 @@ public class Valor {
         this.precioDeVenta = precioDeVenta;
     }
 
-    public int getManoDeObra() {
+    public double getManoDeObra() {
         return manoDeObra;
     }
 
-    public void setManoDeObra(int manoDeObra) {
+    public void setManoDeObra(double manoDeObra) {
         this.manoDeObra = manoDeObra;
     }
 
-    public int getDiferencia() {
+    public double getDiferencia() {
         return diferencia;
     }
 
-    public void setDiferencia(int diferencia) {
+    public void setDiferencia(double diferencia) {
         this.diferencia = diferencia;
+    }
+
+    public double getCostoConductor() {
+        return costoConductor;
+    }
+
+    public void setCostoConductor(double costoConductor) {
+        this.costoConductor = costoConductor;
+    }
+
+    public double getCostoEmpresa() {
+        return costoEmpresa;
+    }
+
+    public void setCostoEmpresa(double costoEmpresa) {
+        this.costoEmpresa = costoEmpresa;
     }
     
     

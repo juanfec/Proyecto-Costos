@@ -41,42 +41,97 @@ public class Giro {
             cell =row.getCell(2);
             v=cell.getNumericCellValue();
             this.valor.setPrecioDeVenta(v);
+            cell =row.getCell(3);
+            v=cell.getNumericCellValue();
+            this.valor.setManoDeObra(v);
+            cell =row.getCell(4);
+            v=cell.getNumericCellValue();
+            this.valor.setDiferencia(v);
             return this.valor;
         }else if(valor<=100000)
         {
-            row = sheet1.getRow(2);
-            cell =row.getCell(3);
+            row = sheet1.getRow(3);
+            cell =row.getCell(2);
             this.valor.setPrecioDeVenta((int) cell.getNumericCellValue());
+            cell =row.getCell(3);
+            v=cell.getNumericCellValue();
+            this.valor.setManoDeObra(v);
+            cell =row.getCell(4);
+            v=cell.getNumericCellValue();
+            this.valor.setDiferencia(v);
+            return this.valor;
         }else if(valor<=150000)
         {
-            row = sheet1.getRow(2);
-            cell =row.getCell(4);
+            row = sheet1.getRow(4);
+            cell =row.getCell(2);
             this.valor.setPrecioDeVenta((int) cell.getNumericCellValue());
+            cell =row.getCell(3);
+            v=cell.getNumericCellValue();
+            this.valor.setManoDeObra(v);
+            cell =row.getCell(4);
+            v=cell.getNumericCellValue();
+            this.valor.setDiferencia(v);
+            return this.valor;
         }else if(valor<=200000)
         {
-            row = sheet1.getRow(2);
-            cell =row.getCell(5);
+            row = sheet1.getRow(5);
+            cell =row.getCell(2);
             this.valor.setPrecioDeVenta((int) cell.getNumericCellValue());
+            cell =row.getCell(3);
+            v=cell.getNumericCellValue();
+            this.valor.setManoDeObra(v);
+            cell =row.getCell(4);
+            v=cell.getNumericCellValue();
+            this.valor.setDiferencia(v);
+            return this.valor;
         }else if(valor<=250000)
         {
-            row = sheet1.getRow(2);
-            cell =row.getCell(6);
+            row = sheet1.getRow(6);
+            cell =row.getCell(5);
             this.valor.setPrecioDeVenta((int) cell.getNumericCellValue());
+            cell =row.getCell(3);
+            v=cell.getNumericCellValue();
+            this.valor.setManoDeObra(v);
+            cell =row.getCell(4);
+            v=cell.getNumericCellValue();
+            this.valor.setDiferencia(v);
+            return this.valor;
         }else if(valor<=300000)
         {
-            row = sheet1.getRow(2);
-            cell =row.getCell(7);
+            row = sheet1.getRow(7);
+            cell =row.getCell(2);
             this.valor.setPrecioDeVenta((int) cell.getNumericCellValue());
+            cell =row.getCell(3);
+            v=cell.getNumericCellValue();
+            this.valor.setManoDeObra(v);
+            cell =row.getCell(4);
+            v=cell.getNumericCellValue();
+            this.valor.setDiferencia(v);
+            return this.valor;
         }else if(valor<=350000)
         {
-            row = sheet1.getRow(2);
-            cell =row.getCell(8);
+            row = sheet1.getRow(8);
+            cell =row.getCell(2);
             this.valor.setPrecioDeVenta((int) cell.getNumericCellValue());
+            cell =row.getCell(3);
+            v=cell.getNumericCellValue();
+            this.valor.setManoDeObra(v);
+            cell =row.getCell(4);
+            v=cell.getNumericCellValue();
+            this.valor.setDiferencia(v);
+            return this.valor;
         }else if(valor<=400000)
         {
-            row = sheet1.getRow(2);
-            cell =row.getCell(9);
+            row = sheet1.getRow(9);
+            cell =row.getCell(2);
             this.valor.setPrecioDeVenta((int) cell.getNumericCellValue());
+            cell =row.getCell(3);
+            v=cell.getNumericCellValue();
+            this.valor.setManoDeObra(v);
+            cell =row.getCell(4);
+            v=cell.getNumericCellValue();
+            this.valor.setDiferencia(v);
+            return this.valor;
         }else if(valor>400000)
         {
             // TODO: preguntar porcentaje
