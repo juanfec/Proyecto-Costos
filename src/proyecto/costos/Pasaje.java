@@ -34,9 +34,48 @@ public class Pasaje {
         double v;
         switch(destino)
         {
-            case "Bucaramanga - Gamarra	" : 
-                row = sheet1.getRow(2);
-                cell =row.getCell(7);
+            case "Bucaramanga - Gamarra" : 
+                System.out.println("entre");
+                establecerValores(2);
+                break;
+            case "Bucaramanga - Aguachica	" :
+                establecerValores(3);
+            break;
+            case "Bucaramanga - Santa Rosa	" :
+                establecerValores(4);
+            break;
+            case "Bucaramanga - San Pablo	" :
+                establecerValores(5);
+            break;
+            case "Santa Rosa - San Pablo	" :
+                establecerValores(6);
+            break;
+            case "San Pablo - Simití	" :
+                establecerValores(7);
+            break;
+            case "Bucaramanga - Puerto Wilches" :
+                establecerValores(8);
+            break;
+            case "Santa Rosa - Cerro de Burgos	" :
+                establecerValores(9);
+            break;
+            case "Santa Rosa - Simití	" :
+                establecerValores(10);
+            break;
+            default: ;
+            break;
+        }
+        return this.valor;
+    }
+    
+    public void establecerValores(int fila)
+    {
+        Row row;
+        Cell cell;
+        double v;
+        String utilidad;
+        row = sheet1.getRow(fila);
+            cell =row.getCell(7);
                 v=cell.getNumericCellValue();
                 this.valor.setCostoConductor(v);
                 cell =row.getCell(8);
@@ -48,132 +87,10 @@ public class Pasaje {
                 cell =row.getCell(10);
                 v=cell.getNumericCellValue();
                 this.valor.setDiferencia(v);
-                //System.out.println(" "+this.valor.getCostoConductor()+" "+ this.valor.getDiferencia());
-                break;
-            case "Bucaramanga - Aguachica	" :
-                row = sheet1.getRow(3);
-                cell =row.getCell(7);
-                v=cell.getNumericCellValue();
-                this.valor.setCostoConductor(v);
-                cell =row.getCell(8);
-                v=cell.getNumericCellValue();
-                this.valor.setCostoEmpresa(v);
-                cell =row.getCell(9);
-                v=cell.getNumericCellValue();
-                this.valor.setPrecioDeVenta(v);
-                cell =row.getCell(10);
-                v=cell.getNumericCellValue();
-                this.valor.setDiferencia(v);;
-            break;
-            case "Bucaramanga - Santa Rosa	" :
-                row = sheet1.getRow(4);
-                cell =row.getCell(7);
-                v=cell.getNumericCellValue();
-                this.valor.setCostoConductor(v);
-                cell =row.getCell(8);
-                v=cell.getNumericCellValue();
-                this.valor.setCostoEmpresa(v);
-                cell =row.getCell(9);
-                v=cell.getNumericCellValue();
-                this.valor.setPrecioDeVenta(v);
-                cell =row.getCell(10);
-                v=cell.getNumericCellValue();
-                this.valor.setDiferencia(v);;
-            break;
-            case "Bucaramanga - San Pablo	" :
-                row = sheet1.getRow(5);
-                cell =row.getCell(7);
-                v=cell.getNumericCellValue();
-                this.valor.setCostoConductor(v);
-                cell =row.getCell(8);
-                v=cell.getNumericCellValue();
-                this.valor.setCostoEmpresa(v);
-                cell =row.getCell(9);
-                v=cell.getNumericCellValue();
-                this.valor.setPrecioDeVenta(v);
-                cell =row.getCell(10);
-                v=cell.getNumericCellValue();
-                this.valor.setDiferencia(v);;
-            break;
-            case "Santa Rosa - San Pablo	" :
-                row = sheet1.getRow(6);
-                cell =row.getCell(7);
-                v=cell.getNumericCellValue();
-                this.valor.setCostoConductor(v);
-                cell =row.getCell(8);
-                v=cell.getNumericCellValue();
-                this.valor.setCostoEmpresa(v);
-                cell =row.getCell(9);
-                v=cell.getNumericCellValue();
-                this.valor.setPrecioDeVenta(v);
-                cell =row.getCell(10);
-                v=cell.getNumericCellValue();
-                this.valor.setDiferencia(v);;
-            break;
-            case "San Pablo - Simití	" :
-                row = sheet1.getRow(7);
-                cell =row.getCell(7);
-                v=cell.getNumericCellValue();
-                this.valor.setCostoConductor(v);
-                cell =row.getCell(8);
-                v=cell.getNumericCellValue();
-                this.valor.setCostoEmpresa(v);
-                cell =row.getCell(9);
-                v=cell.getNumericCellValue();
-                this.valor.setPrecioDeVenta(v);
-                cell =row.getCell(10);
-                v=cell.getNumericCellValue();
-                this.valor.setDiferencia(v);;
-            break;
-            case " Bucaramanga - Puerto Wilches 	" :
-                row = sheet1.getRow(8);
-                cell =row.getCell(7);
-                v=cell.getNumericCellValue();
-                this.valor.setCostoConductor(v);
-                cell =row.getCell(8);
-                v=cell.getNumericCellValue();
-                this.valor.setCostoEmpresa(v);
-                cell =row.getCell(9);
-                v=cell.getNumericCellValue();
-                this.valor.setPrecioDeVenta(v);
-                cell =row.getCell(10);
-                v=cell.getNumericCellValue();
-                this.valor.setDiferencia(v);;
-            break;
-            case "Santa Rosa - Cerro de Burgos	" :
-                row = sheet1.getRow(9);
-                cell =row.getCell(7);
-                v=cell.getNumericCellValue();
-                this.valor.setCostoConductor(v);
-                cell =row.getCell(8);
-                v=cell.getNumericCellValue();
-                this.valor.setCostoEmpresa(v);
-                cell =row.getCell(9);
-                v=cell.getNumericCellValue();
-                this.valor.setPrecioDeVenta(v);
-                cell =row.getCell(10);
-                v=cell.getNumericCellValue();
-                this.valor.setDiferencia(v);;
-            break;
-            case "Santa Rosa - Simití	" :
-                row = sheet1.getRow(10);
-                cell =row.getCell(7);
-                v=cell.getNumericCellValue();
-                this.valor.setCostoConductor(v);
-                cell =row.getCell(8);
-                v=cell.getNumericCellValue();
-                this.valor.setCostoEmpresa(v);
-                cell =row.getCell(9);
-                v=cell.getNumericCellValue();
-                this.valor.setPrecioDeVenta(v);
-                cell =row.getCell(10);
-                v=cell.getNumericCellValue();
-                this.valor.setDiferencia(v);;
-            break;
-            default: ;
-            break;
-        }
-        return this.valor;
+                cell =row.getCell(11);
+                v=cell.getNumericCellValue()*100;
+                utilidad=String.valueOf((int)v);
+                this.valor.setUtilidad(utilidad);
     }
     
     

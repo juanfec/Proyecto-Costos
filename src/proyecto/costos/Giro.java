@@ -37,100 +37,35 @@ public class Giro {
             System.out.println("El valor no puede ser igual o menor a 0");
         }else if(valor<=50000)
         {
-            row = sheet1.getRow(2);
-            cell =row.getCell(2);
-            v=cell.getNumericCellValue();
-            this.valor.setPrecioDeVenta(v);
-            cell =row.getCell(3);
-            v=cell.getNumericCellValue();
-            this.valor.setManoDeObra(v);
-            cell =row.getCell(4);
-            v=cell.getNumericCellValue();
-            this.valor.setDiferencia(v);
+            establecerValores(2);
             return this.valor;
         }else if(valor<=100000)
         {
-            row = sheet1.getRow(3);
-            cell =row.getCell(2);
-            this.valor.setPrecioDeVenta((int) cell.getNumericCellValue());
-            cell =row.getCell(3);
-            v=cell.getNumericCellValue();
-            this.valor.setManoDeObra(v);
-            cell =row.getCell(4);
-            v=cell.getNumericCellValue();
-            this.valor.setDiferencia(v);
+            establecerValores(3);
             return this.valor;
         }else if(valor<=150000)
         {
-            row = sheet1.getRow(4);
-            cell =row.getCell(2);
-            this.valor.setPrecioDeVenta((int) cell.getNumericCellValue());
-            cell =row.getCell(3);
-            v=cell.getNumericCellValue();
-            this.valor.setManoDeObra(v);
-            cell =row.getCell(4);
-            v=cell.getNumericCellValue();
-            this.valor.setDiferencia(v);
+            establecerValores(4);
             return this.valor;
         }else if(valor<=200000)
         {
-            row = sheet1.getRow(5);
-            cell =row.getCell(2);
-            this.valor.setPrecioDeVenta((int) cell.getNumericCellValue());
-            cell =row.getCell(3);
-            v=cell.getNumericCellValue();
-            this.valor.setManoDeObra(v);
-            cell =row.getCell(4);
-            v=cell.getNumericCellValue();
-            this.valor.setDiferencia(v);
+            establecerValores(5);
             return this.valor;
         }else if(valor<=250000)
         {
-            row = sheet1.getRow(6);
-            cell =row.getCell(5);
-            this.valor.setPrecioDeVenta((int) cell.getNumericCellValue());
-            cell =row.getCell(3);
-            v=cell.getNumericCellValue();
-            this.valor.setManoDeObra(v);
-            cell =row.getCell(4);
-            v=cell.getNumericCellValue();
-            this.valor.setDiferencia(v);
+            establecerValores(6);
             return this.valor;
         }else if(valor<=300000)
         {
-            row = sheet1.getRow(7);
-            cell =row.getCell(2);
-            this.valor.setPrecioDeVenta((int) cell.getNumericCellValue());
-            cell =row.getCell(3);
-            v=cell.getNumericCellValue();
-            this.valor.setManoDeObra(v);
-            cell =row.getCell(4);
-            v=cell.getNumericCellValue();
-            this.valor.setDiferencia(v);
+            establecerValores(7);
             return this.valor;
         }else if(valor<=350000)
         {
-            row = sheet1.getRow(8);
-            cell =row.getCell(2);
-            this.valor.setPrecioDeVenta((int) cell.getNumericCellValue());
-            cell =row.getCell(3);
-            v=cell.getNumericCellValue();
-            this.valor.setManoDeObra(v);
-            cell =row.getCell(4);
-            v=cell.getNumericCellValue();
-            this.valor.setDiferencia(v);
+            establecerValores(8);
             return this.valor;
         }else if(valor<=400000)
         {
-            row = sheet1.getRow(9);
-            cell =row.getCell(2);
-            this.valor.setPrecioDeVenta((int) cell.getNumericCellValue());
-            cell =row.getCell(3);
-            v=cell.getNumericCellValue();
-            this.valor.setManoDeObra(v);
-            cell =row.getCell(4);
-            v=cell.getNumericCellValue();
-            this.valor.setDiferencia(v);
+            establecerValores(9);
             return this.valor;
         }else if(valor>400000)
         {
@@ -139,5 +74,27 @@ public class Giro {
         }
                 
         return null;
+    }
+    
+    //busca los valores determinados en el archivo de  excel
+    public void establecerValores(int fila)
+    {
+        Row row;
+        Cell cell;
+        double v;
+        String utilidad;
+        row = sheet1.getRow(fila);
+            cell =row.getCell(2);
+            this.valor.setPrecioDeVenta((int) cell.getNumericCellValue());
+            cell =row.getCell(3);
+            v=cell.getNumericCellValue();
+            this.valor.setManoDeObra(v);
+            cell =row.getCell(4);
+            v=cell.getNumericCellValue();
+            this.valor.setDiferencia(v);
+            cell=row.getCell(5);
+            v=cell.getNumericCellValue()*100;
+            utilidad=String.valueOf((int)v);
+            this.valor.setUtilidad(utilidad);
     }
 }

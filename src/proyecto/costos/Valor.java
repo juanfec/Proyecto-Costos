@@ -15,6 +15,7 @@ public class Valor {
     double diferencia;
     double costoConductor;
     double costoEmpresa;
+    String utilidad;
     
     public Valor(){
         
@@ -64,6 +65,14 @@ public class Valor {
 
     public void setCostoEmpresa(double costoEmpresa) {
         this.costoEmpresa = costoEmpresa;
+    }
+
+    public String getUtilidad() {
+        return utilidad;
+    }
+
+    public void setUtilidad(String utilidad) {
+        this.utilidad = utilidad;
     }
     
     
