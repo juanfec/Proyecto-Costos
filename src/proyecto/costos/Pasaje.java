@@ -35,7 +35,6 @@ public class Pasaje {
         switch(destino)
         {
             case "Bucaramanga - Gamarra" : 
-                System.out.println("entre");
                 establecerValores(2);
                 break;
             case "Bucaramanga - Aguachica	" :

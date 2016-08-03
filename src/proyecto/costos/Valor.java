@@ -16,6 +16,8 @@ public class Valor {
     double costoConductor;
     double costoEmpresa;
     String utilidad;
+    double fleteFijo;
+    double fleteManejo;
     
     public Valor(){
         
@@ -73,6 +75,22 @@ public class Valor {
 
     public void setUtilidad(String utilidad) {
         this.utilidad = utilidad;
+    }
+
+    public double getFleteFijo() {
+        return fleteFijo;
+    }
+
+    public void setFleteFijo(double fleteFijo) {
+        this.fleteFijo = fleteFijo;
+    }
+
+    public double getFleteManejo() {
+        return fleteManejo;
+    }
+
+    public void setFleteManejo(double fleteManejo) {
+        this.fleteManejo = fleteManejo;
     }
     
     
