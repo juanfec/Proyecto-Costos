@@ -20,7 +20,7 @@ public class Encomienda {
     private Valor valor = new Valor();
 
     public Encomienda() {
-        File file = new File("ANEXO-N-MATRIZ-ENCOMIENDAS.xlsx");//importa archivo de giros
+        File file = new File("ANEXO N_MATRIZ _  ENCOMIENDAS.xlsx");//importa archivo de giros
         BuscadorArchivos buscarArchivoGiros = new BuscadorArchivos();
         Workbook wb = buscarArchivoGiros.abrirArchivo(file);
         this.sheet1 = wb.getSheetAt(6); //importa la hoja 5 del archivo de giros donde se encuentran los valores necesitados
@@ -38,7 +38,17 @@ public class Encomienda {
         this.valor.setFleteManejo(valorDeclarado*0.006);
         switch(origenDestino)
         {
-            case "Bucaramanga - Santa Rosa" :
+            case "Bucaramanga - Santa Rosa":
+                precio=establecerValores(3);
+                if(volumen>peso)
+                {
+                    this.valor.setFleteFijo(volumen*precio);
+                }else
+                {
+                    this.valor.setFleteFijo(peso*precio);
+                }
+                break;
+                case "Santa Rosa - Bucaramanga":
                 precio=establecerValores(3);
                 if(volumen>peso)
                 {
@@ -58,7 +68,27 @@ public class Encomienda {
                     this.valor.setFleteFijo(peso*precio);
                 }
             break;
+            case "San Pablo - Bucaramanga" :
+                precio=establecerValores(4);
+                if(volumen>peso)
+                {
+                    this.valor.setFleteFijo(volumen*precio);
+                }else
+                {
+                    this.valor.setFleteFijo(peso*precio);
+                }
+            break;
             case "Bucaramanga - Simití" :
+                precio=establecerValores(5);
+                if(volumen>peso)
+                {
+                    this.valor.setFleteFijo(volumen*precio);
+                }else
+                {
+                    this.valor.setFleteFijo(peso*precio);
+                }
+            break;
+             case "Simití - Bucaramanga" :
                 precio=establecerValores(5);
                 if(volumen>peso)
                 {
@@ -78,7 +108,27 @@ public class Encomienda {
                     this.valor.setFleteFijo(peso*precio);
                 }
             break;
+            case "Puerto Wilches - Bucaramanga" :
+                precio=establecerValores(6);
+                if(volumen>peso)
+                {
+                    this.valor.setFleteFijo(volumen*precio);
+                }else
+                {
+                    this.valor.setFleteFijo(peso*precio);
+                }
+            break;
             case "Puerto Wilches - Santa Rosa" :
+                precio=establecerValores(7);
+                if(volumen>peso)
+                {
+                    this.valor.setFleteFijo(volumen*precio);
+                }else
+                {
+                    this.valor.setFleteFijo(peso*precio);
+                }
+            break;
+            case "Santa Rosa - Puerto Wilches" :
                 precio=establecerValores(7);
                 if(volumen>peso)
                 {
@@ -98,7 +148,27 @@ public class Encomienda {
                     this.valor.setFleteFijo(peso*precio);
                 }
             break;
+            case "Santa Rosa - San Pablo" :
+                precio=establecerValores(8);
+                if(volumen>peso)
+                {
+                    this.valor.setFleteFijo(volumen*precio);
+                }else
+                {
+                    this.valor.setFleteFijo(peso*precio);
+                }
+            break;
             case "Bucaramanga - Aguachica" :
+                precio=establecerValores(9);
+                if(volumen>peso)
+                {
+                    this.valor.setFleteFijo(volumen*precio);
+                }else
+                {
+                    this.valor.setFleteFijo(peso*precio);
+                }
+            break;
+            case "Aguachica - Bucaramanga" :
                 precio=establecerValores(9);
                 if(volumen>peso)
                 {
@@ -118,6 +188,16 @@ public class Encomienda {
                     this.valor.setFleteFijo(peso*precio);
                 }
             break;
+             case "Gamarra - Bucaramanga" :
+                precio=establecerValores(10);
+                if(volumen>peso)
+                {
+                    this.valor.setFleteFijo(volumen*precio);
+                }else
+                {
+                    this.valor.setFleteFijo(peso*precio);
+                }
+            break;
             case "Aguachica - Santa Rosa" :
                 precio=establecerValores(11);
                 if(volumen>peso)
@@ -128,7 +208,27 @@ public class Encomienda {
                     this.valor.setFleteFijo(peso*precio);
                 }
             break;
+            case "Santa Rosa - Aguachica" :
+                precio=establecerValores(11);
+                if(volumen>peso)
+                {
+                    this.valor.setFleteFijo(volumen*precio);
+                }else
+                {
+                    this.valor.setFleteFijo(peso*precio);
+                }
+            break;
             case "Gamarra - Santa Rosa":
+                precio=establecerValores(11);
+                if(volumen>peso)
+                {
+                    this.valor.setFleteFijo(volumen*precio);
+                }else
+                {
+                    this.valor.setFleteFijo(peso*precio);
+                }
+                break;
+             case "Santa Rosa - Gamarra":
                 precio=establecerValores(11);
                 if(volumen>peso)
                 {

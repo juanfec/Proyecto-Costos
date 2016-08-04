@@ -21,7 +21,7 @@ public class Giro {
     private Valor valor = new Valor();
 
     public Giro() {
-        File file = new File("L_MATRIZ_GIROS.xlsx");//importa archivo de giros
+        File file = new File("ANEXO-L_MATRIZ-_-GIROS.xlsx");//importa archivo de giros
         BuscadorArchivos buscarArchivoGiros = new BuscadorArchivos();
         Workbook wb = buscarArchivoGiros.abrirArchivo(file);
         this.sheet1 = wb.getSheetAt(4); //importa la hoja 5 del archivo de giros donde se encuentran los valores necesitados
@@ -69,7 +69,9 @@ public class Giro {
             return this.valor;
         }else if(valor>400000)
         {
-            // TODO: preguntar porcentaje
+            
+           establecerValoresMas400(10,valor);
+            return this.valor;
             
         }
                 
@@ -96,5 +98,24 @@ public class Giro {
             v=cell.getNumericCellValue()*100;
             utilidad=String.valueOf((int)v);
             this.valor.setUtilidad(utilidad);
+    }
+    
+    public void establecerValoresMas400(int fila, int valor)
+    {
+        Row row;
+        Cell cell;
+        double v;
+        String utilidad;
+        row = sheet1.getRow(fila);
+        cell =row.getCell(3);
+        v=cell.getNumericCellValue();
+        this.valor.setManoDeObra(v);
+        double porcentaje = valor *0.026;
+        this.valor.setPrecioDeVenta(porcentaje);
+        v=this.valor.getManoDeObra()-this.valor.getPrecioDeVenta();
+        this.valor.setDiferencia(v);
+        v=this.valor.getPrecioDeVenta()/this.valor.getDiferencia();
+        utilidad=String.valueOf((int)v);
+        this.valor.setUtilidad(utilidad);
     }
 }

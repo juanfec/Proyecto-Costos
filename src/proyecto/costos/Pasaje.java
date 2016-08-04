@@ -37,28 +37,55 @@ public class Pasaje {
             case "Bucaramanga - Gamarra" : 
                 establecerValores(2);
                 break;
-            case "Bucaramanga - Aguachica	" :
+            case "Gamarra - Bucaramanga" : 
+                establecerValores(2);
+                break;
+            case "Bucaramanga - Aguachica" :
                 establecerValores(3);
             break;
-            case "Bucaramanga - Santa Rosa	" :
+            case "Aguachica - Bucaramanga" :
+                establecerValores(3);
+            break;
+            case "Bucaramanga - Santa Rosa" :
                 establecerValores(4);
             break;
-            case "Bucaramanga - San Pablo	" :
+            case "Santa Rosa - Bucaramanga" :
+                establecerValores(4);
+            break;
+            case "Bucaramanga - San Pablo" :
                 establecerValores(5);
             break;
-            case "Santa Rosa - San Pablo	" :
+            case "San Pablo - Bucaramanga" :
+                establecerValores(5);
+            break;
+            case "Santa Rosa - San Pablo" :
                 establecerValores(6);
             break;
-            case "San Pablo - Simití	" :
+            case "San Pablo - Santa Rosa" :
+                establecerValores(6);
+            break;
+            case "San Pablo - Simití" :
+                establecerValores(7);
+            break;
+            case "Simití - San Pablo" :
                 establecerValores(7);
             break;
             case "Bucaramanga - Puerto Wilches" :
                 establecerValores(8);
             break;
-            case "Santa Rosa - Cerro de Burgos	" :
+            case "Puerto Wilches - Bucaramanga" :
+                establecerValores(8);
+            break;
+            case "Santa Rosa - Cerro de Burgos" :
                 establecerValores(9);
             break;
-            case "Santa Rosa - Simití	" :
+            case "Cerro de Burgos - Santa Rosa" :
+                establecerValores(9);
+            break;
+            case "Santa Rosa - Simití" :
+                establecerValores(10);
+            break;
+            case "Simití - Santa Rosa" :
                 establecerValores(10);
             break;
             default: ;
@@ -90,6 +117,8 @@ public class Pasaje {
                 v=cell.getNumericCellValue()*100;
                 utilidad=String.valueOf((int)v);
                 this.valor.setUtilidad(utilidad);
+                v=this.valor.getCostoConductor()+this.valor.getCostoEmpresa();
+                this.valor.setValorTotal(v);
     }
     
     

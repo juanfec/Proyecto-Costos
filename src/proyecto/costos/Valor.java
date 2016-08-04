@@ -18,6 +18,7 @@ public class Valor {
     String utilidad;
     double fleteFijo;
     double fleteManejo;
+    double valorTotal;
     
     public Valor(){
         
@@ -91,6 +92,14 @@ public class Valor {
 
     public void setFleteManejo(double fleteManejo) {
         this.fleteManejo = fleteManejo;
+    }
+
+    public double getValorTotal() {
+        return valorTotal;
+    }
+
+    public void setValorTotal(double valorTotal) {
+        this.valorTotal = valorTotal;
     }
     
     
